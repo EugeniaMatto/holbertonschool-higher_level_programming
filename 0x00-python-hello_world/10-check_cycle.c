@@ -8,7 +8,7 @@ int check_cycle(listint_t *list)
 {
 	listint_t *aux;
 
-	if (list == NULL || list->next == NULL)
+	if (list == NULL)
 		return (0);
 
 	aux = list->next;
