@@ -6,16 +6,19 @@
  */
 int check_cycle(listint_t *list)
 {
-	listint_t *head = list;
+	listint_t *aux;
 
 	if (list == NULL || list->next == NULL)
 		return (0);
 
-	while (list != NULL)
+	aux = list->next;
+	while (aux != NULL && aux->next != NULL)
 	{
-		if (list->next == head)
+		if (list == aux)
 			return (1);
+
 		list = list->next;
+		aux = aux->next->next;
 	}
 
 	return (0);
