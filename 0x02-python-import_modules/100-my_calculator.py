@@ -11,11 +11,11 @@ if __name__ == "__main__":
         print("Unknown operator. Available operators: +, -, * and /")
         exit(1)
     if (sys.argv[2] == '+'):
-        cuenta = int(sys.argv[1]) + int(sys.argv[3])
+        cuenta = add(int(sys.argv[1]), int(sys.argv[3]))
     if (sys.argv[2] == '-'):
-        cuenta = int(sys.argv[1]) - int(sys.argv[3])
+        cuenta = sub(int(sys.argv[1]), int(sys.argv[3]))
     if (sys.argv[2] == '*'):
-        cuenta = int(sys.argv[1]) * int(sys.argv[3])
+        cuenta = mul(int(sys.argv[1]), int(sys.argv[3]))
     if (sys.argv[2] == '/'):
-        cuenta = int(sys.argv[1]) / int(sys.argv[3])
+        cuenta = div(int(sys.argv[1]), int(sys.argv[3]))
     print(f"{sys.argv[1]} {sys.argv[2]} {sys.argv[3]} = {cuenta:d}")
