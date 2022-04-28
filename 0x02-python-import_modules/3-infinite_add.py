@@ -7,4 +7,3 @@ if __name__ == "__main__":
         if i != "./3-infinite_add.py":
             suma += int(i)
     print(f"{suma}")
-
