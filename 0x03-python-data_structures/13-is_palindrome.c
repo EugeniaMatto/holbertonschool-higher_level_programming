@@ -6,52 +6,34 @@
  */
 int is_palindrome(listint_t **head)
 {
-	long int i = 0, n = 0, cont = 0;
-	char *arr;
-	listint_t *aux = *head;
+	int cont = 0, i = 0;
+	listint_t *aux = *head, *med = *head;
 
 	if (head == NULL || *head == NULL)
 		return (1);
-	arr = malloc(200);
-	while (aux)
+	while (aux->next)
 	{
-		n = aux->n;
-		if (n < 0)
-			n = -n;
-		while (n > 0)
-		{
-			arr[i] = (n % 10) + '0';
-			n = n / 10;
-			i++;
-		}
-		arr[i] = ',';
-		i++;
+		cont++;
+		if (aux->n == aux->next->n)
+			break;
 		aux = aux->next;
 	}
-	arr[i] = ',';
-	while (i > cont)
+	if (aux->next == NULL)
+		return (0);
+	aux = aux->next;
+	while(aux)
 	{
-		n = 0;
-		while (n < 2)
+		i = 0;
+		med = *head;
+		while(i < cont - 1)
 		{
-			if (arr[i - 1] == ',')
-				n++;
-			i--;
-		}
-		if (arr[i] == ',')
-			i++;
-		while (arr[cont] != ',')
-		{
-			if (arr[cont] != arr[i])
-			{
-				free(arr);
-				return (0);
-			}
-			cont++;
+			med = med->next;
 			i++;
 		}
-		cont++;
+		if(aux->n != med->n)
+			return (0);
+		aux = aux->next;
+		cont--;
 	}
-	free(arr);
 	return (1);
 }
