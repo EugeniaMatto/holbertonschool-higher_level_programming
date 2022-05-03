@@ -15,7 +15,6 @@ int is_palindrome(listint_t **head)
 	{
 		arr[i] = aux->n;
 		i++;
-		ant = aux;
 		aux = aux->next;
 	}
 	i = i - 1;
