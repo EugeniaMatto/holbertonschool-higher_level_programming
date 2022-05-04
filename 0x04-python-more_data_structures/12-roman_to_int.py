@@ -2,7 +2,7 @@
 def roman_to_int(roman_string):
     suma = 0
     if (isinstance(roman_string, str) and roman_string):
-        roman_string += "_"
+        roman_string += "-"
         for i in range(len(roman_string) - 1):
             if roman_string[i] == 'I':
                 if roman_string[i + 1] == 'V' or roman_string[i + 1] == 'X':
