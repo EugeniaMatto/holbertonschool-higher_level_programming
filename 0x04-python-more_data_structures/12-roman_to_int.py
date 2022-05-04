@@ -27,4 +27,5 @@ def roman_to_int(roman_string):
                     suma += 500
             if roman_string[i] == 'M':
                 suma += 1000
+        roman_string = roman_string[:-1]
     return suma
