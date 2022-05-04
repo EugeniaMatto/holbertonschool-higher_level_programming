@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 def roman_to_int(roman_string):
     suma = 0
-    if (isinstance(roman_string, str) && roman_string):
+    if (isinstance(roman_string, str) and roman_string):
         for i in roman_string:
             if i == 'I':
                 suma += 1
