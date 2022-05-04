@@ -4,7 +4,7 @@ def uniq_add(my_list=[]):
     new = []
     for i in my_list:
         try:
-            new(i)
+            new.index(i)
         except ValueError:
             add += i
         new.append(i)
