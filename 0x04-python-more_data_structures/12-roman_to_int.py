@@ -2,6 +2,10 @@
 def roman_to_int(roman_string):
     suma = 0
     if (isinstance(roman_string, str) and roman_string):
+        for i in roman_string:
+            if ((i != 'I') and (i != 'V') and (i != 'X') and
+            (i != 'L') and (i != 'C') and (i != 'D') and (i != 'M')):
+                return 0
         roman_string += "-"
         for i in range(len(roman_string) - 1):
             if roman_string[i] == 'I':
