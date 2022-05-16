@@ -12,6 +12,3 @@ def magic_calculation(a, b):
             break
 
     return result
-
-import dis
-dis.dis(magic_calculation)
