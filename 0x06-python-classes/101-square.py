@@ -58,6 +58,16 @@ class Square:
             print()
 
     def __str__(self):
-        """ overwrite str method """
-        self.my_print()
+        """override __str__"""
+        if (self.__size > 0):
+            for i in range(self.__position[1]):
+                print()
+            for i in range(self.__size):
+                for j in range(self.__position[0]):
+                    print(" ", end="")
+                for k in range(self.__size):
+                    print("#", end="")
+                if (i != (self.__size - 1)):
+                    print()
+  
         return ""
