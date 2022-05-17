@@ -65,6 +65,8 @@ class SinglyLinkedList:
     def __str__(self):
         """override str"""
         a = self.__head
+        if a is None:
+            return ""
         while(a.next_node is not None):
             print(a.data)
             a = a.next_node
