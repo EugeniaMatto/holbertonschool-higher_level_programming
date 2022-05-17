@@ -30,7 +30,7 @@ class Node:
     @next_node.setter
     def next_node(self, value):
         """setter position"""
-        if (type(value) != Node and value != None):
+        if (type(value) != Node and value is not None):
             raise TypeError("next_node must be a Node object")
         self.__next_node = value
 
@@ -43,16 +43,16 @@ class SinglyLinkedList:
         self.__head = None
 
     def sorted_insert(self, value):
-        if (self.__head == None):
+        if (self.__head is None):
             self.__head = Node(value)
         else:
             a = self.__head
             aux = Node(value)
             ant = None
-            while (a != None):
+            while (a is not None):
                 if (a.data > aux.data):
                     aux.next_node = a
-                    if ant:
+                    if ant is not None:
                         ant.next_node = aux
                     if self.__head == a:
                         self.__head = aux
@@ -65,9 +65,8 @@ class SinglyLinkedList:
     def __str__(self):
         """override str"""
         a = self.__head
-        while(a.next_node != None):
+        while(a.next_node is not None):
             print(a.data)
             a = a.next_node
         print(a.data, end="")
         return ""
-
