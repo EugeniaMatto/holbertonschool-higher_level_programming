@@ -2,6 +2,7 @@
 """ module ex 100 advanced
 """
 
+
 def matrix_mul(m_a, m_b):
     """
     function that multiplies 2 matrices
@@ -52,9 +53,9 @@ def matrix_mul(m_a, m_b):
     for i in range(new_fi):
         new.append([])
     for i in range(len(new)):
-        res = 0
-        for k in range(len(m_a[0])):
-             res = m_a[i][k] * m_b[k][i]
-        new[i].append(res)
-            
+        for j in range(new_col):
+            res = 0
+            for k in range(len(m_b)):
+                res += m_a[i][k] * m_b[k][j]
+            new[i].append(res)
     return new

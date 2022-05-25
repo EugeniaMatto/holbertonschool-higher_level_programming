@@ -1,0 +1,31 @@
+INLCUDE:
+>>> matrix_mul = __import__('100-matrix_mul').matrix_mul
+
+TEST: 
+
+>>> matrix_mul('a', 0)
+Traceback (most recent call last):
+TypeError: m_a must be a list
+
+>>> matrix_mul([[1, 2], [3, 4]], [[1, 2], [3, 4]])
+[[7, 10], [15, 22]]
+
+>>> matrix_mul([1, 2], [1, 2])
+Traceback (most recent call last):
+TypeError: m_a must be a list of lists
+
+>>> matrix_mul([[1, 2], [1, 2]], [1, 2])
+Traceback (most recent call last):
+TypeError: m_b must be a list of lists
+
+>>> matrix_mul([[1, 2], [1, 2]], "hla")
+Traceback (most recent call last):
+TypeError: m_b must be a list
+
+>>> matrix_mul([[1, 2], [1, 2]], [[1, 2], [1, 'a']])
+Traceback (most recent call last):
+TypeError: m_b should contain only integers or floats
+
+>>> matrix_mul([[], []], [[3], [4]])
+Traceback (most recent call last):
+ValueError: m_a can't be empty
