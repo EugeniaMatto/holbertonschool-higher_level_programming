@@ -53,6 +53,8 @@ TEST:
 >>> a = MyList([0, 2, -4])
 >>> a.print_sorted()
 [-4, 0, 2]
+>>> print(a)
+[0, 2, -4]
 
 >>> a = MyList("Euge")
 >>> print(a)
