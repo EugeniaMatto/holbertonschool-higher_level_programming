@@ -9,9 +9,5 @@ class MyList(list):
     def print_sorted(self):
         """ print sorted function """
         new = self.copy()
-        for i in range(len(new) - 1):
-            if new[i] > new[i + 1]:
-                aux = new[i]
-                new[i] = new[i + 1]
-                new[i + 1] = aux
+        new.sort()
         print(new)
