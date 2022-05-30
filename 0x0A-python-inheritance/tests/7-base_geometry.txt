@@ -45,3 +45,9 @@ TypeError: name must be an integer
 >>> bg.integer_validator("name", 2.55)
 Traceback (most recent call last):
 TypeError: name must be an integer
+
+>>> bg.integer_validator(9, 2.55)
+Traceback (most recent call last):
+TypeError: 9 must be an integer
+
+>>> bg.integer_validator(9, 2)
