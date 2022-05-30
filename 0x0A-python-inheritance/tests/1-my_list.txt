@@ -49,3 +49,18 @@ TEST:
 >>> a.append(-20)
 >>> a.print_sorted()
 [-40, -30, -20]
+
+>>> a = MyList([0, 2, -4])
+>>> a.print_sorted()
+[-4, 0, 2]
+
+>>> a = MyList("Euge")
+>>> print(a)
+['E', 'u', 'g', 'e']
+
+>>> a.print_sorted()
+['E', 'e', 'g', 'u']
+
+>>> a = MyList([2, 2, 2])
+>>> a.print_sorted()
+[2, 2, 2]
