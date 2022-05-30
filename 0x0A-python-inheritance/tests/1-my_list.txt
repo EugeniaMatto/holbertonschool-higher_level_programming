@@ -1,25 +1,37 @@
 INCLUDE:
 
-
 >>> MyList = __import__('1-my_list').MyList
 
 TEST:
 
->>> [1, 4, 2, 3, 5].print_sorted()
-[1, 2, 3, 4, 5]
+>>> a = MyList()
+>>> a.append(1)
+>>> a.append(3)
+>>> a.append(2)
+>>> a.print_sorted()
+[1, 2, 3]
 
->>> [-1, -4, -2, -3, -5].print_sorted()
-[-5, -4, -3, -2, -1]
+>>> a = MyList()
+>>> a.append(-3)
+>>> a.append(-5)
+>>> a.append(-4)
+>>> a.print_sorted()
+[-5, -4, -3]
 
->>> [].print_sorted()
+>>> a = MyList()
+>>> a.print_sorted()
 []
 
->>> [0].print_sorted()
+>>> a = MyList()
+>>> a.append(0)
+>>> a.print_sorted()
 [0]
 
->>> [0, -1, 2, 78].print_sorted()
-[-1, 0, 2, 78]
+>>> a = MyList()
+>>> a.append(-1)
+>>> a.append(0)
+>>> a.append(2)
+>>> a.print_sorted()
+[-1, 0, 2]
 
->>> [1, 2].print_sorted()
-[1, 2]
 
