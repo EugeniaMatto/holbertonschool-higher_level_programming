@@ -2,6 +2,8 @@ INCLUDE:
 
 >>> BaseGeometry = __import__('7-base_geometry').BaseGeometry
 
+>>> doc = __import__('7-base_geometry').__doc__
+
 TEST:
 
 >>> bg = BaseGeometry()
@@ -61,3 +63,22 @@ TypeError: hola must be an integer
 >>> bg.integer_validator(None, None)
 Traceback (most recent call last):
 TypeError: None must be an integer
+
+>>> bg.integer_validator("hola", None)
+Traceback (most recent call last):
+TypeError: hola must be an integer
+
+>>> print(len(doc) > 0)
+True
+
+>>> doc = __import__('7-base_geometry').BaseGeometry.__doc__
+>>> print(len(doc) > 0)
+True
+
+>>> doc = __import__('7-base_geometry').BaseGeometry.area.__doc__
+>>> print(len(doc) > 0)
+True
+
+>>> doc = __import__('7-base_geometry').BaseGeometry.integer_validator.__doc__
+>>> print(len(doc) > 0)
+True
