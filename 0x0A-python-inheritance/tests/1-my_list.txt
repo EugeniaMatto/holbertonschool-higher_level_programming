@@ -30,8 +30,22 @@ TEST:
 >>> a = MyList()
 >>> a.append(-1)
 >>> a.append(0)
+>>> a.append(99)
 >>> a.append(2)
 >>> a.print_sorted()
-[-1, 0, 2]
+[-1, 0, 2, 99]
 
+>>> a = MyList()
+>>> a.append(-1)
+>>> a.append(0)
+>>> a.append(20)
+>>> a.append(22)
+>>> a.print_sorted()
+[-1, 0, 20, 22]
 
+>>> a = MyList()
+>>> a.append(-40)
+>>> a.append(-30)
+>>> a.append(-20)
+>>> a.print_sorted()
+[-40, -30, -20]
