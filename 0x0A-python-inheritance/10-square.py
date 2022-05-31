@@ -14,3 +14,11 @@ class Square(Rectangle):
         """ init square """
         super().__init__(size, size)
         self.__size = size
+
+    def area(self):
+        """ area """
+        super().area()
+
+    def __str__(self):
+        """ str """
+        super().__str__()
