@@ -7,6 +7,7 @@ class MyInt(int):
 
     def __init__(self, n):
         """ init """
+        super().__init__()
         self.__n = n
 
     def __eq__(self, other):
