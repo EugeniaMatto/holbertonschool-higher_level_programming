@@ -17,5 +17,4 @@ for i in sys.argv:
     if i is sys.argv[0]:
         continue
     data.append(i)
-
 save_to_json_file(data, "add_item.json")
