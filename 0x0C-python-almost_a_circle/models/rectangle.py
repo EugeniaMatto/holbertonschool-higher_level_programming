@@ -90,14 +90,14 @@ class Rectangle(Base):
 
     def update(self, *args):
         """ update function """
-        l = len(args)
-        if (l > 0):
+        le = len(args)
+        if (le > 0):
             self.id = args[0]
-        if (l > 1):
+        if (le > 1):
             self.__width = args[1]
-        if (l > 2):
+        if (le > 2):
             self.__height = args[2]
-        if (l > 3):
+        if (le > 3):
             self.__x = args[3]
-        if (l > 4):
+        if (le > 4):
             self.__y = args[4]
