@@ -65,6 +65,7 @@ class Rectangle(Base):
 
     @y.setter
     def y(self, value):
+        """ y setter """
         if (type(value) != int):
             raise TypeError("y must be an integer")
         if (value < 0):
@@ -86,3 +87,16 @@ class Rectangle(Base):
         """ override str """
         return (f"[Rectangle] ({self.id}) {self.__x}/{self.__y} " +
                 f"- {self.__width}/{self.__height}")
+
+    def update(self, *args):
+        l = len(args)
+        if (l > 0):
+            self.id = args[0]
+        if (l > 1):
+            self.__width = args[1]
+        if (l > 2):
+            self.__height = args[2]
+        if (l > 3):
+            self.__x = args[3]
+        if (l > 4):
+            self.__y = args[4]
