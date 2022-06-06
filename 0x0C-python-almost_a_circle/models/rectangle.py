@@ -89,6 +89,7 @@ class Rectangle(Base):
                 f"- {self.__width}/{self.__height}")
 
     def update(self, *args):
+        """ update function """
         l = len(args)
         if (l > 0):
             self.id = args[0]
