@@ -3,6 +3,7 @@
 
 
 import json
+from os.path import exists
 
 
 class Base:
@@ -58,3 +59,16 @@ class Base:
             aux = cls(1, 1)
         aux.update(**dictionary)
         return aux
+
+    @classmethod
+    def load_from_file(cls):
+        """ load_from_file """
+        filename = cls.__name__ + ".json"
+        a = []
+        if exists(filename):
+            with open(filename, 'r') as txt:
+                for i in cls.from_json_string(txt.read()):
+                    a.append(cls.create(**i))
+                return a
+        else:
+            return a
