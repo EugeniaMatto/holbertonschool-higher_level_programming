@@ -40,3 +40,12 @@ class Base:
             a = cls.to_json_string(a)
         with open(filename, 'w') as txt:
             txt.write(a)
+
+    @staticmethod
+    def from_json_string(json_string):
+        """ from_json_string """
+        a = []
+        if json_string is not None:
+            a = json.loads(json_string)
+        return a
+        
