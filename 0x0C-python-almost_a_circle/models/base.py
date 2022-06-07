@@ -27,5 +27,6 @@ class Base:
             a = "["
             for i in list_dictionaries:
                 a += json.dumps(i)
+                a+= ", "
             a += "]"
         return a
