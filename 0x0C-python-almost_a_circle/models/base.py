@@ -53,7 +53,7 @@ class Base:
     def create(cls, **dictionary):
         if cls.__name__ == "Square":
             aux = cls(1, 1, 1)
-        else:
+        elif cls.__name__ == "Rectangle":
             aux = cls(1, 1, 1, 1)
         aux.update(**dictionary)
         return aux
