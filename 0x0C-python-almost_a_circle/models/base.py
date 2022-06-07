@@ -31,8 +31,9 @@ class Base:
         """ writes the JSON string representation of list_objs """
         filename = cls.__name__ + ".json"
         a = []
-        for i in list_objs:
-            a.append(i.to_dictionary())
+        if list_objs is not None:
+            for i in list_objs:
+                a.append(i.to_dictionary())
         if a == []:
             a = "[]"
         else:
