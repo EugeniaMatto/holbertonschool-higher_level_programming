@@ -48,4 +48,12 @@ class Base:
         if json_string is not None:
             a = json.loads(json_string)
         return a
-        
+
+    @classmethod
+    def create(cls, **dictionary):
+        if cls.__name__ == "Square":
+            aux = cls(1, 1, 1)
+        else:
+            aux = cls(1, 1, 1, 1)
+        aux.update(**dictionary)
+        return aux
