@@ -33,6 +33,9 @@ class Base:
         a = []
         for i in list_objs:
             a.append(i.to_dictionary())
-        a = cls.to_json_string(a)
+        if a == []:
+            a = "[]"
+        else:
+            a = cls.to_json_string(a)
         with open(filename, 'w') as txt:
             txt.write(a)
