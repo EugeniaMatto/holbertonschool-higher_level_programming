@@ -33,16 +33,16 @@ class Square(Rectangle):
             if (le > 1):
                 self.size = args[1]
             if (le > 2):
-                self.__x = args[2]
+                self.x = args[2]
             if (le > 3):
-                self.__y = args[3]
+                self.y = args[3]
         else:
             for k, v in kwargs.items():
-                if (k == "size"):
-                    self.size = v
                 if (k == "x"):
-                    self.__x = v
+                    self.x = v
                 if (k == "y"):
-                    self.__y = v
+                    self.y = v
                 if (k == "id"):
                     self.id = v
+                if (k == "size"):
+                    self.size = v
