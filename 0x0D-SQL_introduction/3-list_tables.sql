@@ -1,0 +1,2 @@
+-- SQL 
+SHOW TABLES;
