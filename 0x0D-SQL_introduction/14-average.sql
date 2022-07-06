@@ -1,2 +1,2 @@
 -- SQL
-DELETE (SUM(score) / COUNT(*)) AS average FROM second_table
+DELETE AVG(score) AS average FROM second_table
