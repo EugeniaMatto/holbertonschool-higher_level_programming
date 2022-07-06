@@ -1,2 +1,2 @@
 -- SQL
-SELECT score, count(*) as number FROM second_table GROUP BY score ORDER BY desc
+SELECT score, count(*) AS number FROM second_table GROUP BY score ORDER BY DESC
