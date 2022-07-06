@@ -1,2 +1,2 @@
--- SQL 
-SELECT COUNT(*) from first_table where id=98
+-- SQL
+SELECT COUNT(*) FROM first_table WHERE id = 89
