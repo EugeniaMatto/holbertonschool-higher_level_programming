@@ -6,7 +6,7 @@ argv.reverse();
 if (argv.length < 2) {
   console.log(0);
 } else {
-  while (argv[0] == argv[1]) {
+  while (argv[0] === argv[1]) {
     argv.slice();
   }
   if (!argv[1]) {
