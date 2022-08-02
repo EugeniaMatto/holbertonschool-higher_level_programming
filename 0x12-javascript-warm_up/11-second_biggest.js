@@ -2,10 +2,8 @@
 /* script */
 const argv = process.argv;
 const myVar = [];
-if (!argv[2]) {
+if (!argv[2] || !argv[3]) {
   console.log(0);
-} else if (!argv[3]) {
-  console.log(argv[2]);
 } else {
   let i = 0;
 
