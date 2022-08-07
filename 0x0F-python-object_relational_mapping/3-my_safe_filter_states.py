@@ -1,18 +1,17 @@
 #!/usr/bin/python3
-""" ex 0 """
+"""takes in an argument and displays all values in the states"""
 
 if __name__ == "__main__":
-    import sys
     import MySQLdb
-    av = sys.argv
-    db = MySQLdb.connect(
-            host="localhost", port=3306,
-            user=av[1], passwd=av[2], db=av[3])
+    from sys import argv
+    db = MySQLdb.connect(host="localhost", port=3306, user=argv[1],
+                         passwd=argv[2], db=argv[3])
+
     cur = db.cursor()
     cur.execute("SELECT * FROM states WHERE name LIKE %s ORDER BY id",
-                (av[4],))
+                (argv[4],))
     rows = cur.fetchall()
-    for row in rows:
-            print(row)
+    for a in rows:
+        print(a)
     cur.close()
     db.close()
