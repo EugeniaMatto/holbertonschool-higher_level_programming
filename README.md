@@ -2,7 +2,7 @@
 
 **This repository has the contents given in the second trimester as a Holberton School Student, 2022.**
 
-####
+![Holberton](https://apply.holbertonschool.com/holberton-logo.png)
 
 ## Subjects of study:
 - **`Python`** - First declarations.
@@ -28,6 +28,5 @@
 - REGEX.
 - Network Introduction.
 
-![Holberton](https://apply.holbertonschool.com/holberton-logo.png)
 
 **by [María Eugenia Matto](https://www.linkedin.com/in/maria-matto/) - 2022 - Montevideo, Uruguay.**
