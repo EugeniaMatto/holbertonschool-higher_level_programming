@@ -21,7 +21,7 @@
 - Doubly Linked Lists.
 - Stacks and Queues.
 - Hash Tables.
-- Sorting Algoritms.
+- Sorting Algorithms.
 - Binary Trees.
 - **`BASH`** - Scripts.
 - **`Unix`** - Processes and Signals.
