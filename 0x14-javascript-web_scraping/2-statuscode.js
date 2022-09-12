@@ -5,8 +5,8 @@ const url = process.argv[2];
 
 axios.get(url)
   .then(function (response) {
-    console.log('code: 200');
+    console.log('code: ' + response.status);
   })
-  .catch(error => {
-    console.log('code: 404');
+  .catch(function (error) {
+    console.log('code: ' + error.response.status);
   });
